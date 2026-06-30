@@ -1,0 +1,20 @@
+{
+  "name": "ai-interview-platform",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/web",
+    "apps/api"
+  ],
+  "scripts": {
+    "dev": "concurrently --names \"API,WEB\" --prefix-colors \"blue,magenta\" \"npm run dev --workspace=apps/api\" \"npm run dev --workspace=apps/web\"",
+    "build": "npm run build --workspaces",
+    "db:migrate": "npm run db:migrate --workspace=apps/api",
+    "db:generate": "npm run db:generate --workspace=apps/api",
+    "db:studio": "npm run db:studio --workspace=apps/api",
+    "typecheck": "concurrently \"npm run typecheck --workspace=apps/api\" \"npm run typecheck --workspace=apps/web\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
