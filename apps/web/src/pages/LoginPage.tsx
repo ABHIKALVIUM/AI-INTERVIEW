@@ -117,9 +117,6 @@ export default function LoginPage() {
             <div>
               <div className="flex items-center justify-between mb-1.5">
                 <label htmlFor="password" className="label-text mb-0">Password</label>
-                <button type="button" className="text-xs text-indigo-400 hover:text-indigo-300 transition-colors">
-                  Forgot password?
-                </button>
               </div>
               <input
                 id="password"
