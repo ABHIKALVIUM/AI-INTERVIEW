@@ -2,6 +2,8 @@
 
 A production-grade, voice-driven AI mock interview platform. Candidates speak with an AI interviewer that listens, adapts, probes, and challenges — powered by LangGraph.js, Groq, LiveKit, Deepgram, and Cartesia.
 
+DEPLOY LINK: https://ai-interview-web-e7xh.vercel.app/login
+
 ## Prerequisites
 
 - **Node.js 20+**
