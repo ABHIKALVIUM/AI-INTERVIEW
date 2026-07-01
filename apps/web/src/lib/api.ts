@@ -5,7 +5,7 @@ import type { UserProfile } from '../store/authStore';
 // ─── Axios Instance ────────────────────────────────────────────────────────────
 
 const api = axios.create({
-  baseURL: '/api/v1',
+  baseURL: import.meta.env.VITE_API_URL ? `${import.meta.env.VITE_API_URL}/api/v1` : '/api/v1',
   withCredentials: true,
   headers: {
     'Content-Type': 'application/json',
