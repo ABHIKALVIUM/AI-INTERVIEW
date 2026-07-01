@@ -34,10 +34,12 @@ const updateProfileSchema = z.object({
 
 // ─── Cookie helpers ───────────────────────────────────────────────────────────
 
+const isProduction = process.env['NODE_ENV'] === 'production';
+
 const COOKIE_OPTIONS = {
   httpOnly: true,
-  secure: process.env['NODE_ENV'] === 'production',
-  sameSite: 'strict' as const,
+  secure: isProduction,
+  sameSite: (isProduction ? 'none' : 'lax') as 'none' | 'lax',
   path: '/',
 };
 
